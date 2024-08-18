@@ -20,7 +20,7 @@ int main(){
         cout << "Enter the price of your product (Enter 0 to exit): " << endl;
         cin >> prodprice;
 
-        if (cin.fail()){   //Validates that the entry is a number
+        if (cin.fail() || prodprice < 0){   //Validates that the entry is a number and positive
             cin.clear();
             cin.ignore(10000, '\n');
             cout << "Invalid entry, please enter a number: " << endl;
